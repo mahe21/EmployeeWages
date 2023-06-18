@@ -6,6 +6,8 @@
         {
             EmployeePayRole employeePayRole = new EmployeePayRole();
             employeePayRole.EmployeeAttendence();
+
+            employeePayRole.EmployeeWage();
         }
     }
 }
