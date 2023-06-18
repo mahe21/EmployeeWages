@@ -14,6 +14,8 @@
             employeePayRole.PartTimeWageSwitchCase();
 
             employeePayRole.EmployeeMonthlyWage();
+
+            employeePayRole.EmployeeWageMaxHours();
         }
     }
 }

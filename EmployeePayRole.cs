@@ -13,6 +13,7 @@ namespace EmployeePayRole
 
         public const int EMP_RATE_PER_HOUR = 20;
         public const int NUM_OF_WORKING_DAYS = 2;
+        public const int MAX_HRS_IN_MONTH = 10;
 
         public void EmployeeAttendence()
         {
@@ -140,6 +141,38 @@ namespace EmployeePayRole
                 total_emp_wage += emp_Wage;
                 Console.WriteLine("Employee wage:" + emp_Wage);
             }
+            Console.WriteLine("Total Employee Wage:" + total_emp_wage);
+        }
+
+        public void EmployeeWageMaxHours()
+        {
+            int emp_Hrs = 0;
+            int totalEmpHrs = 0;
+            int totalWorkingDays = 0;
+            int total_emp_wage = 0;
+
+            while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS)
+            {
+                totalWorkingDays++;
+                //random function
+                Random random = new Random();
+                int empCheck = random.Next(0, 3);
+                switch (empCheck)
+                {
+                    case IS_PART_TIME:
+                        emp_Hrs = 4;
+                        break;
+                    case IS_FULL_TIME:
+                        emp_Hrs = 8;
+                        break;
+                    default:
+                        emp_Hrs = 0;
+                        break;
+                }
+                totalEmpHrs += emp_Hrs;
+                Console.WriteLine("Days:" + totalWorkingDays + "Emp Hrs: " + emp_Hrs);
+            }
+            int totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine("Total Employee Wage:" + total_emp_wage);
         }
     }
