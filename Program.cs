@@ -10,6 +10,8 @@
             employeePayRole.EmployeeWage();
 
             employeePayRole.PartTimeWage();
+
+            employeePayRole.PartTimeWageSwitchCase();
         }
     }
 }
