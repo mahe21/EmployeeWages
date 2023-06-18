@@ -12,6 +12,8 @@
             employeePayRole.PartTimeWage();
 
             employeePayRole.PartTimeWageSwitchCase();
+
+            employeePayRole.EmployeeMonthlyWage();
         }
     }
 }
