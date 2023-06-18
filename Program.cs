@@ -8,6 +8,8 @@
             employeePayRole.EmployeeAttendence();
 
             employeePayRole.EmployeeWage();
+
+            employeePayRole.PartTimeWage();
         }
     }
 }
